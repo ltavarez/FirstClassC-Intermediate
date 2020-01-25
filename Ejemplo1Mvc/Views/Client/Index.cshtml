@@ -1,0 +1,52 @@
+﻿@using System.Linq;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+@if (ViewBag.HaveData)
+{
+
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Activo</td>
+        </tr>
+
+
+
+        @foreach (var person in ViewBag.PersonList)
+        {
+            <tr>
+
+                <td>@person.Name</td>
+                <td>@person.LastName</td>
+                <td>@person.IsActive</td>
+
+            </tr>
+
+
+        }
+
+
+    </table>
+
+
+}
+else
+{
+    <h1> no tiene info </h1>
+}
+
+
+
+
+
+
+
+
+
+
+
