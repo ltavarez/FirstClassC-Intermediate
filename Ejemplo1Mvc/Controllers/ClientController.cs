@@ -10,7 +10,17 @@ namespace Ejemplo1Mvc.Controllers
         public IActionResult Index()
         {
 
-            List<Person> persons = new List<Person>{};
+            List<Person> persons = new List<Person> {new Person()
+            {
+                Name = "Itla",
+                LastName = "C# intermedio",
+                IsActive = true
+            }, new Person()
+                {
+                    Name = "Itla 2",
+                    LastName = "Pruebas",
+                    IsActive = false
+                }};
 
 
             ViewBag.HaveData = persons.Any();
