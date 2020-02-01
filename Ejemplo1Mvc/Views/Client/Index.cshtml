@@ -40,6 +40,22 @@ else
     <h1> no tiene info </h1>
 }
 
+<form action="/Client/Add" method="post">
+    
+    <label for="PersonName"> Nombre </label>
+    <input id="PersonName" type="text" name="Name" />
+    
+    <label for="LastName"> Apellido </label>
+    <input id="LastName" type="text" name="LastName" />
+    
+    <label > esta ativo? </label>
+    <input  type="radio" value="true" name="IsActive"/> Si
+    <input  type="radio" value="false" name="IsActive"/> No 
+    
+    <button type="submit"> Enviar </button>
+
+</form>
+
 
 
 

@@ -1,6 +1,7 @@
 ﻿using Ejemplo1Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Dynamic;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Ejemplo1Mvc.Controllers
@@ -9,7 +10,6 @@ namespace Ejemplo1Mvc.Controllers
     {
         public IActionResult Index()
         {
-
             List<Person> persons = new List<Person> {new Person()
             {
                 Name = "Itla",
@@ -22,6 +22,7 @@ namespace Ejemplo1Mvc.Controllers
                     IsActive = false
                 }};
 
+        
 
             ViewBag.HaveData = persons.Any();
             ViewBag.PersonList = persons;
@@ -30,6 +31,13 @@ namespace Ejemplo1Mvc.Controllers
 
         public IActionResult Add()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Add(Person person)
+        {
+            
             return View();
         }
 
